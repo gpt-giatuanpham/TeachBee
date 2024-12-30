@@ -1,0 +1,46 @@
+.create__lecture {
+  margin: $mg-5 0;
+  .create__lecture__content {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: 0 auto;
+    padding: $pd-4 0;
+    background-image: linear-gradient(
+      to right,
+      $white,
+      $color-purple-2,
+      $white
+    );
+    border-radius: 10%;
+    .create__lecture__btn {
+      padding: $pd-0;
+      background-color: $color-white-0;
+      border-radius: 100px;
+      transition: all 0.4s;
+      cursor: pointer;
+      .create__icon {
+        background-color: $color-purple-2;
+        padding: $pd-0;
+        border-radius: 100%;
+        transition: all 0.4s;
+      }
+      .createLectureTitle {
+        @include styleText($color-purple-1, $fs-5, $fw-1);
+        transition: all 0.4s;
+        text-decoration: none;
+        margin: 0 $mg-3 0 0;
+        font-family: "Inter";
+      }
+      &:hover {
+        background-color: $color-purple-1;
+        .create__icon {
+          background-color: $color-white-0;
+        }
+        .createLectureTitle {
+          color: $color-white-0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.intro {
+  margin-top: $mg-7;
+  .intro__container {
+    .intro__content {
+      margin-bottom: $mg-6;
+      row-gap: $mg-5;
+      .intro__content__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h1 {
+          @include styleText($color-blue-2, $fs-2, $fw-1);
+          font-family: "Montserrat";
+        }
+        h2 {
+          @include styleText($color-blue-6, $fs-4, $fw-1);
+          font-family: "Montserrat";
+        }
+        h3 {
+          @include styleText($color-blue-5, $fs-5, $fw-1);
+          font-family: "Montserrat";
+        }
+        h4 {
+          @include styleText($color-blue-5, $fs-7, $fw-1);
+          font-family: "Montserrat";
+        }
+        a {
+          border-radius: 100px;
+          @include styleText($color-blue-6, $fs-3, $fw-1);
+          font-family: "Montserrat";
+        }
+        p {
+          @include styleText($color-gray-7, $fs-0, $fw-4);
+          font-family: "Montserrat";
+        }
+      }
+      .intro__content__img {
+        align-items: center;
+        .intro__img__1 {
+          @include styleImage(100%, 100%, contain);
+        }
+        .intro__img__2 {
+          @include styleImage(80%, auto, contain);
+        }
+        .intro__img__3 {
+          @include styleImage(60%, auto, contain);
+        }
+      }
+    }
+  }
+}

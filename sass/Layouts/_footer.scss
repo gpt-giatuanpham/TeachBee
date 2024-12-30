@@ -1,0 +1,47 @@
+footer {
+  @include styleText($color-gray-0, $fs-1, $fw-0);
+  .footer__left {
+    h3 {
+      @include styleText($color-blue-6, $fs-7, $fw-2);
+      margin-bottom: $mg-2;
+      span {
+        color: $color-blue-2;
+      }
+    }
+    p {
+      @include styleText($color-gray-0, $fs-0, $fw-0);
+      font-family: "Inter";
+    }
+  }
+  .footer__right {
+    h6 {
+      @include styleText($color-gray-7, $fs-0, $fw-2);
+      text-transform: capitalize;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: $pd-2;
+      li {
+        a {
+          @include styleText($color-gray-9, $fs-1, $fw-1);
+          font-family: "Inter";
+          &:hover {
+            color: $color-red-0;
+          }
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    width: 90%;
+    margin: $mg-5 - 2 auto;
+    img {
+      width: 110px;
+      margin-right: $mg-3;
+    }
+    .nav-link {
+      padding: 0 $pd-0;
+    }
+  }
+}

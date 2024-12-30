@@ -1,0 +1,21 @@
+.lecture__list {
+  .lecture__selector {
+    .lecture__selector__top {
+      padding: $pd-0 0;
+      .lecture__selector__top__left {
+        h4 {
+          margin: 0;
+          @include styleText($color-blue-7, $fs-5, $fw-1);
+          font-family: "Inter";
+        }
+      }
+      .lecture__selector__top__right {
+        p {
+          margin: 0;
+          @include styleText($color-gray-7, $fs-3, $fw-4);
+          font-family: "Inter";
+        }
+      }
+    }
+  }
+}

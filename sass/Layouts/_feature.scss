@@ -1,0 +1,41 @@
+.feature {
+  margin-bottom: $mg-7;
+  .feature__item {
+    .feature__item__icon {
+      margin-bottom: $mg-2;
+      .feature__item__icon__bg1 {
+        padding: $pd-0;
+        background-color: #eef4ff;
+        display: inline-block;
+        border-radius: 100%;
+        .feature__item__icon__bg2 {
+          padding: $pd-0;
+          background-color: #e0eaff;
+          display: inline-block;
+          border-radius: 100%;
+          svg {
+            width: 1.6rem;
+            height: 1.6rem;
+          }
+        }
+      }
+    }
+    h3 {
+      @include styleText($color-dark-2, $fs-5, $fw-1);
+      font-family: "Inter";
+      margin: $mg-2 0;
+    }
+    p {
+      @include styleText($color-gray-0, $fs-0, $fw-0);
+      font-family: "Inter";
+    }
+    .learnMore {
+      text-decoration: none;
+      @include styleText($color-blue-2, $fs-3, $fw-1);
+    }
+  }
+
+  hr {
+    margin-top: $mg-5;
+  }
+}

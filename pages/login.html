@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- bootstap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  <section class="login__screen">
+    <div class="login__screen__container row">
+      <div class="login__screen__form__container col-5">
+        <h1 class="login__screen__form__title">Đăng nhập</h1>
+        <form action="../index.html" method="get">
+          <div class="form-group mb-4">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+              placeholder="Tài khoản của bạn">
+          </div>
+          <div class="form-group mb-4">
+            <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" required
+              placeholder="Mật khẩu của bạn">
+          </div>
+          <button id="loginBtn" type="submit" class="mt-4">Đăng nhập</button>
+        </form>
+        <div class="mt-3">
+          Chưa có tài khoản? <a href="./register.html" class="text-decoration-none">Đăng ký</a>
+        </div>
+        <div class="d-flex justify-content-center login__deco__container my-4">
+          <div class="login__deco__container__line"></div>
+          <p class="login__deco">Hoặc đăng nhập với</p>
+          <div class="login__deco__container__line"></div>
+        </div>
+        <div>
+          <ul class="d-flex justify-content-center column-gap-5 list-unstyled">
+            <li class="login__screen__form__social__icon social__icon__apple">
+              <a href="#">
+                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="Apple Logo">
+                    <rect width="40" height="40" transform="translate(0.5)" fill="black" />
+                    <path id="path4"
+                      d="M35.4035 27.7086C34.845 28.9508 34.1838 30.0942 33.4178 31.1455C32.3736 32.5787 31.5186 33.5707 30.8597 34.1216C29.8384 35.0258 28.744 35.4889 27.5722 35.5152C26.7309 35.5152 25.7164 35.2848 24.5354 34.8173C23.3505 34.352 22.2617 34.1216 21.2661 34.1216C20.2219 34.1216 19.102 34.352 17.9042 34.8173C16.7045 35.2848 15.738 35.5284 14.9991 35.5525C13.8754 35.5986 12.7553 35.1223 11.6372 34.1216C10.9236 33.5224 10.0311 32.4953 8.96182 31.0402C7.81459 29.4863 6.8714 27.6844 6.1325 25.6302C5.34116 23.4113 4.94446 21.2627 4.94446 19.1825C4.94446 16.7997 5.47932 14.7446 6.55063 13.0224C7.39258 11.639 8.51268 10.5478 9.91458 9.74676C11.3165 8.94569 12.8312 8.53747 14.4625 8.51135C15.355 8.51135 16.5255 8.77713 17.9801 9.29948C19.4305 9.82358 20.3619 10.0894 20.7702 10.0894C21.0755 10.0894 22.1101 9.77858 23.864 9.15901C25.5226 8.58444 26.9224 8.34653 28.0692 8.44024C31.1766 8.68166 33.5112 9.86089 35.0638 11.9854C32.2847 13.6064 30.9099 15.8768 30.9373 18.7894C30.9623 21.0581 31.8173 22.946 33.4976 24.445C34.259 25.1407 35.1094 25.6785 36.0556 26.0603C35.8504 26.6332 35.6338 27.1818 35.4035 27.7086ZM28.2767 0.711314C28.2767 2.4895 27.6018 4.14978 26.2567 5.68653C24.6334 7.51341 22.67 8.56907 20.5408 8.40249C20.5137 8.18917 20.498 7.96465 20.498 7.72871C20.498 6.02166 21.2699 4.19477 22.6408 2.70105C23.3252 1.94475 24.1957 1.31589 25.2513 0.814245C26.3046 0.320082 27.3009 0.0467985 28.2379 0C28.2653 0.237715 28.2767 0.475446 28.2767 0.711291V0.711314Z"
+                      fill="white" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="login__screen__form__social__icon social__icon__google">
+              <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Google Logo">
+                  <rect width="40" height="40" transform="translate(0.5)" fill="white" />
+                  <g id="logo googleg 48dp">
+                    <path id="Shape" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M38.9 20.4356C38.9 19.0765 38.778 17.7697 38.5515 16.5151H20.5V23.9292H30.8152C30.3708 26.325 29.0205 28.3549 26.9905 29.714V34.5231H33.1848C36.8091 31.1863 38.9 26.2727 38.9 20.4356Z"
+                      fill="#4285F4" />
+                    <path id="Shape_2" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M20.4999 39.1664C25.6749 39.1664 30.0135 37.4501 33.1847 34.5228L26.9904 29.7137C25.2741 30.8637 23.0787 31.5433 20.4999 31.5433C15.5078 31.5433 11.2825 28.1717 9.77527 23.6414H3.37186V28.6073C6.52565 34.8713 13.0075 39.1664 20.4999 39.1664Z"
+                      fill="#34A853" />
+                    <path id="Shape_3" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M9.77539 23.6418C9.39206 22.4918 9.17425 21.2634 9.17425 20.0001C9.17425 18.7368 9.39206 17.5084 9.77539 16.3584V11.3925H3.37198C2.07387 13.98 1.33334 16.9073 1.33334 20.0001C1.33334 23.0929 2.07387 26.0202 3.37198 28.6077L9.77539 23.6418Z"
+                      fill="#FBBC05" />
+                    <path id="Shape_4" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M20.4999 8.45642C23.3139 8.45642 25.8404 9.42346 27.8268 11.3227L33.3241 5.82536C30.0048 2.73256 25.6662 0.833313 20.4999 0.833313C13.0075 0.833313 6.52564 5.12839 3.37186 11.3924L9.77527 16.3583C11.2825 11.828 15.5078 8.45642 20.4999 8.45642Z"
+                      fill="#EA4335" />
+                  </g>
+                </g>
+              </svg>
+            </li>
+            <li class="login__screen__form__social__icon social__icon__facebook">
+              <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Facebook Logo">
+                  <rect width="40" height="40" transform="translate(0.5)" fill="#1877F2" />
+                  <path id="path14"
+                    d="M39.6667 20.1164C39.6667 9.53094 31.0855 0.949738 20.5 0.949738C9.91453 0.949738 1.33333 9.53094 1.33333 20.1164C1.33333 29.683 8.3423 37.6124 17.5052 39.0502V25.6568H12.6387V20.1164H17.5052V15.8937C17.5052 11.0901 20.3667 8.43672 24.7447 8.43672C26.8417 8.43672 29.0352 8.81107 29.0352 8.81107V13.5279H26.6183C24.2373 13.5279 23.4948 15.0053 23.4948 16.521V20.1164H28.8105L27.9608 25.6568H23.4948V39.0502C32.6577 37.6124 39.6667 29.683 39.6667 20.1164Z"
+                    fill="white" />
+                </g>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="login__screen__img__container col-7">
+        <img class="loginImg" src="../img/login.png" alt="loginImg">
+      </div>
+    </div>
+  </section>
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- js -->
+  <script>
+    document.querySelectorAll('.form-group input').forEach(input => {
+      input.addEventListener('focus', function () {
+        this.previousElementSibling.style.color = 'var(--blue-4)';
+      });
+      input.addEventListener('blur', function () {
+        this.previousElementSibling.style.color = '';
+      });
+    });
+  </script>
+</body>
+
+</html>
