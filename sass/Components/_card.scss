@@ -1,0 +1,62 @@
+.card {
+    height: 275px;
+    .card-body {
+        padding: 1rem;
+        .card-title {
+            @include styleText($color-black-0, $fs-0 - 1, $fw-1);
+        }
+        .card-text {
+            margin: $mg-0 0;
+            @include styleText($color-gray-0, $fs-1 - 1, $fw-0);
+        }
+        .card__stars {
+            i {
+                @include styleText($color-yellow-0, $fs-1 - 2, $fw-3);
+            }
+            span:nth-child(2) {
+                @include styleText($color-gray-0, $fs-1, $fw-1);
+            }
+            span:nth-child(3) {
+                @include styleText($color-gray-0, $fs-1 - 1, $fw-0);
+            }
+        }
+        .card__price {
+            text-align: right;
+            padding: $pd-0 0;
+            span:nth-child(1) {
+                @include styleText($color-gray-0, $fs-1, $fs-0);
+                text-decoration: line-through;
+            }
+            span:nth-child(2) {
+                @include styleText($color-black-0, $fs-0, $fw-1);
+            }
+        }
+    }
+}
+
+.card--feedback {
+    height: 280px;
+    .card-body {
+        padding: 2rem;
+        .card__top {
+            display: flex;
+            margin-bottom: 1rem;
+            .card__avatar {
+                margin-right: 1rem;
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                }
+            }
+            .card__info {
+                .card__name {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .card-text {
+            @include styleText($color-black-0, $fs-0, $fw-0);
+        }
+    }
+}
