@@ -22,8 +22,11 @@ if (isset($_POST['register'])) {
     
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
         "email" => $email,
-        "password" => $_POST['password'], // raw password, pre-hash
-        "email_confirm" => true
+        "password" => $_POST['password'],
+        "email_confirm" => true,
+        "user_metadata" => [
+            "name" => $name
+        ]
     ]));
     
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -54,17 +57,18 @@ if (isset($_POST['login'])) {
 
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    $authResponse = json_decode(curl_exec($ch), true);
+   $authResponse = json_decode(curl_exec($ch), true);
 
     if (isset($authResponse['access_token'])) {
-
+    
         $_SESSION['sb_access_token'] = $authResponse['access_token'];
         $_SESSION['sb_refresh_token'] = $authResponse['refresh_token'];
+    
         $_SESSION['email'] = $email;
-
+        $_SESSION['name'] = $authResponse['user']['user_metadata']['name'] ?? $email;
+    
         header("Location: user_page.php");
         exit();
-
     } else {
 
         $_SESSION['login_error'] = "Incorrect email or password";
