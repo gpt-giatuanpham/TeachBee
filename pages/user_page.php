@@ -22,6 +22,24 @@ if (!isset($_SESSION["email"])) {
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+  <!-- Small screen warning modal -->
+  <div class="overTake hidden">
+    <div id="screenGuardBox" class="screenGuard-box">
+      <div class="modal__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+          <line x1="12" y1="18" x2="12.01" y2="18"></line>
+        </svg>
+      </div>
+      <h1>Sorry for the inconvenience</h1>
+      <p>
+        Please switch to a computer or laptop screen size
+        for the best experience!
+      </p>
+    </div>
+  </div>
+    
   <!-- Header -->
   <header>
     <nav class="navbar myNavbar navbar-expand-md">
@@ -367,5 +385,32 @@ if (!isset($_SESSION["email"])) {
     crossorigin="anonymous"></script>
   <!-- js -->
   <script src="../js/script.js"></script>
+  <!-- Small screen warning modal logic -->
+  <script>
+    function myFunction(x) {
+      var overlays = document.querySelectorAll('.overTake');
+      var modals = document.querySelectorAll('.screenGuard-box');
+      if (x.matches) {
+        // Screen is wide enough (min-width: 1040px) -> hide the warning
+        overlays.forEach(function (el) { el.classList.add('hidden'); });
+        modals.forEach(function (el) { el.classList.add('hidden'); });
+      } else {
+        // Screen is too small -> show the warning
+        overlays.forEach(function (el) { el.classList.remove('hidden'); });
+        modals.forEach(function (el) { el.classList.remove('hidden'); });
+      }
+    }
+
+    // Create a MediaQueryList object
+    var mql = window.matchMedia("(min-width: 1040px)");
+
+    // Call listener function at runtime
+    myFunction(mql);
+
+    // Attach listener function on state changes
+    mql.addEventListener("change", function () {
+      myFunction(mql);
+    });
+  </script>
 </body>
 </html>
