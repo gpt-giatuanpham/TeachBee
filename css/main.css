@@ -1228,3 +1228,69 @@ footer .footer__bottom .nav-link {
 @media (max-width: 480px) {
   .gt-grid { grid-template-columns: 1fr; }
 }
+/* ── Small screen warning modal ── */
+.overTake {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(41, 48, 59, 0.7);
+  width: 100vw;
+  height: 100dvh;
+  backdrop-filter: blur(5px);
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.overTake.hidden {
+  display: none;
+}
+
+.screenGuard-box {
+  color: #29303b;
+  background-color: #fff;
+  padding: 2.5rem 2rem;
+  width: 25rem;
+  max-width: 100%;
+  border-radius: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: modalIn .22s ease;
+  display: block;
+}
+.screenGuard-box.hidden {
+  display: none;
+}
+.screenGuard-box .modal__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: #ede9fe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screenGuard-box .modal__icon svg {
+  width: 30px;
+  height: 30px;
+  color: #5925DC;
+}
+.screenGuard-box h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #3538cd;
+  margin-bottom: 12px;
+}
+.screenGuard-box p {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #667085;
+  line-height: 1.5;
+  margin: 0;
+}
